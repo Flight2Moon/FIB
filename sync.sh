@@ -41,6 +41,7 @@ else
   echo "  ./git_sync.sh push [프로젝트_경로]"
   echo
   echo "예시:"
+  echo "  ./sync.sh force-pull"
   echo "  ./git_sync.sh pull"
   echo "  ./git_sync.sh push"
   echo "  ./git_sync.sh pull /home/jihoney/workdir/main_workdir/FIB/FIB_M3_jh/FIB-M3_v4_6var_jh_0506"
