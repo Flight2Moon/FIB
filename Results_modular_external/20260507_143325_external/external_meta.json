@@ -1,0 +1,192 @@
+{
+  "mode": "external",
+  "run_dir": "Results_modular_external/20260507_143325",
+  "diagnostic_zones": [
+    {
+      "Model": "LogReg",
+      "Cutoff_Source": "internal_test_only",
+      "Rule_out_Cutoff": 0.251253,
+      "Rule_in_Cutoff": 0.629938,
+      "Gray_n": 98,
+      "Gray_pct": 0.2792022792022792,
+      "Rule_out_NPV": 0.9958333333333333,
+      "Rule_in_PPV": 0.23076923076923078
+    },
+    {
+      "Model": "RandomForest",
+      "Cutoff_Source": "internal_test_only",
+      "Rule_out_Cutoff": 0.147617,
+      "Rule_in_Cutoff": 0.462606,
+      "Gray_n": 84,
+      "Gray_pct": 0.23931623931623933,
+      "Rule_out_NPV": 0.9920634920634921,
+      "Rule_in_PPV": 0.2
+    },
+    {
+      "Model": "XGBoost",
+      "Cutoff_Source": "internal_test_only",
+      "Rule_out_Cutoff": 0.19529099762439728,
+      "Rule_in_Cutoff": 0.4995790123939514,
+      "Gray_n": 48,
+      "Gray_pct": 0.13675213675213677,
+      "Rule_out_NPV": 0.9895104895104895,
+      "Rule_in_PPV": 0.17647058823529413
+    },
+    {
+      "Model": "CatBoost",
+      "Cutoff_Source": "internal_test_only",
+      "Rule_out_Cutoff": 0.143479,
+      "Rule_in_Cutoff": 0.556205,
+      "Gray_n": 70,
+      "Gray_pct": 0.19943019943019943,
+      "Rule_out_NPV": 0.9887640449438202,
+      "Rule_in_PPV": 0.21428571428571427
+    }
+  ],
+  "dual_zone_summary_external": [
+    {
+      "object_name": "LogReg",
+      "dataset": "external",
+      "rule_out_cutoff": 0.251253,
+      "rule_in_cutoff": 0.629938,
+      "rule_out_npv": 0.9958333333333333,
+      "rule_out_sensitivity": 0.9090909090909091,
+      "rule_out_fn": 1,
+      "rule_in_ppv": 0.23076923076923078,
+      "rule_in_specificity": 0.9705882352941176,
+      "rule_in_fp": 10,
+      "gray_n": 98,
+      "gray_pct": 0.2792022792022792
+    },
+    {
+      "object_name": "RandomForest",
+      "dataset": "external",
+      "rule_out_cutoff": 0.147617,
+      "rule_in_cutoff": 0.462606,
+      "rule_out_npv": 0.9920634920634921,
+      "rule_out_sensitivity": 0.8181818181818181,
+      "rule_out_fn": 2,
+      "rule_in_ppv": 0.2,
+      "rule_in_specificity": 0.9647058823529412,
+      "rule_in_fp": 12,
+      "gray_n": 84,
+      "gray_pct": 0.23931623931623933
+    },
+    {
+      "object_name": "XGBoost",
+      "dataset": "external",
+      "rule_out_cutoff": 0.19529099762439728,
+      "rule_in_cutoff": 0.4995790123939514,
+      "rule_out_npv": 0.9895104895104895,
+      "rule_out_sensitivity": 0.7272727272727273,
+      "rule_out_fn": 3,
+      "rule_in_ppv": 0.17647058823529413,
+      "rule_in_specificity": 0.9588235294117647,
+      "rule_in_fp": 14,
+      "gray_n": 48,
+      "gray_pct": 0.13675213675213677
+    },
+    {
+      "object_name": "CatBoost",
+      "dataset": "external",
+      "rule_out_cutoff": 0.143479,
+      "rule_in_cutoff": 0.556205,
+      "rule_out_npv": 0.9887640449438202,
+      "rule_out_sensitivity": 0.7272727272727273,
+      "rule_out_fn": 3,
+      "rule_in_ppv": 0.21428571428571427,
+      "rule_in_specificity": 0.9676470588235294,
+      "rule_in_fp": 11,
+      "gray_n": 70,
+      "gray_pct": 0.19943019943019943
+    }
+  ],
+  "marker_diagnostic_external": [
+    {
+      "marker": "FIB-4",
+      "dataset": "external",
+      "rule_out_cutoff": 1.3,
+      "rule_in_cutoff": 2.67,
+      "source_note": "fixed cutoffs",
+      "AUROC": 0.7179144385026738,
+      "PR_AUC(AP)": 0.07260868108569175,
+      "gray_n": 126,
+      "gray_pct": 0.358974358974359,
+      "plot_path": "/Users/jihoney/Documents/workdir/donga/01_Medical/Code_Medi/03_FIB/FIB-M3_v4_6var_jh_0506/Results_modular_external/20260507_143325/marker_FIB-4_external_Diagnostic_Zones.png"
+    },
+    {
+      "marker": "NFS",
+      "dataset": "external",
+      "rule_out_cutoff": -1.455,
+      "rule_in_cutoff": 0.676,
+      "source_note": "fixed cutoffs",
+      "AUROC": 0.7283422459893047,
+      "PR_AUC(AP)": 0.08232909030325404,
+      "gray_n": 118,
+      "gray_pct": 0.33618233618233617,
+      "plot_path": "/Users/jihoney/Documents/workdir/donga/01_Medical/Code_Medi/03_FIB/FIB-M3_v4_6var_jh_0506/Results_modular_external/20260507_143325/marker_NFS_external_Diagnostic_Zones.png"
+    },
+    {
+      "marker": "M2BPGi",
+      "dataset": "external",
+      "rule_out_cutoff": 0.53,
+      "rule_in_cutoff": 1.31,
+      "source_note": "internal test-derived cutoffs",
+      "AUROC": 0.7255347593582888,
+      "PR_AUC(AP)": 0.25195489391768877,
+      "gray_n": 181,
+      "gray_pct": 0.5156695156695157,
+      "plot_path": "/Users/jihoney/Documents/workdir/donga/01_Medical/Code_Medi/03_FIB/FIB-M3_v4_6var_jh_0506/Results_modular_external/20260507_143325/marker_M2BPGi_external_Diagnostic_Zones.png"
+    }
+  ],
+  "marker_zone_summary_external": [
+    {
+      "marker": "FIB-4",
+      "dataset": "external",
+      "rule_out_cutoff": 1.3,
+      "rule_in_cutoff": 2.67,
+      "rule_out_sensitivity": 0.6363636363636364,
+      "rule_out_specificity": 0.6029411764705882,
+      "rule_out_npv": 0.9808612440191388,
+      "rule_out_fn": 4,
+      "rule_in_sensitivity": 0.18181818181818182,
+      "rule_in_specificity": 0.9588235294117647,
+      "rule_in_ppv": 0.125,
+      "rule_in_fp": 14,
+      "gray_n": 126,
+      "gray_pct": 0.358974358974359
+    },
+    {
+      "marker": "NFS",
+      "dataset": "external",
+      "rule_out_cutoff": -1.455,
+      "rule_in_cutoff": 0.676,
+      "rule_out_sensitivity": 0.7272727272727273,
+      "rule_out_specificity": 0.65,
+      "rule_out_npv": 0.9866071428571429,
+      "rule_out_fn": 3,
+      "rule_in_sensitivity": 0.09090909090909091,
+      "rule_in_specificity": 0.9764705882352941,
+      "rule_in_ppv": 0.1111111111111111,
+      "rule_in_fp": 8,
+      "gray_n": 118,
+      "gray_pct": 0.33618233618233617
+    },
+    {
+      "marker": "M2BPGi",
+      "dataset": "external",
+      "rule_out_cutoff": 0.53,
+      "rule_in_cutoff": 1.31,
+      "rule_out_sensitivity": 0.7272727272727273,
+      "rule_out_specificity": 0.4647058823529412,
+      "rule_out_npv": 0.9813664596273292,
+      "rule_out_fn": 3,
+      "rule_in_sensitivity": 0.18181818181818182,
+      "rule_in_specificity": 0.9794117647058823,
+      "rule_in_ppv": 0.2222222222222222,
+      "rule_in_fp": 7,
+      "gray_n": 181,
+      "gray_pct": 0.5156695156695157
+    }
+  ]
+}

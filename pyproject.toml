@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fib-modular-pipeline"
+version = "0.1.0"
+description = "Notebook-free internal/external fibrosis validation pipeline"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy",
+  "pandas",
+  "scikit-learn",
+  "openpyxl",
+  "matplotlib",
+  "pyyaml",
+  "joblib",
+  "xgboost",
+  "catboost",
+  "optuna",
+  "shap",
+  "scipy"
+]

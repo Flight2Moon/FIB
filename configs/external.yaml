@@ -1,0 +1,36 @@
+mode: external
+
+data:
+  external_excel_path: "../Fib_External validatioin data.xlsx"
+  external_sheet: "external_data"
+  target_col: "Label"
+
+internal_artifacts:
+  internal_results_xlsx: "./Results_modular_internal/latest/internal_results.xlsx"
+  internal_results_root: ./Results_modular_internal/20260506_162835
+
+thresholds:
+  fixed_threshold: 0.50
+  diagnostic_target_sens: 0.95
+  diagnostic_target_spec: 0.90
+
+markers:
+  fib4_rule_out: 1.3
+  fib4_rule_in: 2.67
+  nfs_rule_out: -1.455
+  nfs_rule_in: 0.676
+  internal_marker_sheet: "marker_diag_internal"
+
+plots:
+  calibration_bins: 10
+  dca_threshold_min: 0.05
+  dca_threshold_max: 0.50
+  dca_threshold_step: 0.01
+
+bootstrap:
+  n_bootstrap: 1000
+  seed: 2026
+
+output:
+  out_root: "./Results_modular_external"
+  run_name: null

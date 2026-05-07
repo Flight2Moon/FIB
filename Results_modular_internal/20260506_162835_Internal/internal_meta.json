@@ -1,0 +1,189 @@
+{
+  "mode": "internal",
+  "run_dir": "Results_modular_internal/20260506_162835",
+  "all_features": [
+    "AGE",
+    "AST",
+    "ALT",
+    "PLT",
+    "M2BPGi",
+    "DM_final"
+  ],
+  "num_cols": [
+    "AGE",
+    "M2BPGi",
+    "PLT",
+    "AST",
+    "ALT"
+  ],
+  "cat_cols": [
+    "DM_final"
+  ],
+  "optuna_best_params": {
+    "LogReg": {
+      "model__solver": "saga",
+      "model__C": 5.138629326752034,
+      "model__l1_ratio": 0.05047192077153834
+    },
+    "RandomForest": {
+      "model__n_estimators": 300,
+      "model__max_depth": 10,
+      "model__min_samples_split": 10,
+      "model__min_samples_leaf": 5,
+      "model__max_features": "sqrt",
+      "model__max_samples": 0.7243115214588692
+    },
+    "XGBoost": {
+      "model__n_estimators": 600,
+      "model__max_depth": 3,
+      "model__learning_rate": 0.03458137361832418,
+      "model__subsample": 0.9912644503979694,
+      "model__colsample_bytree": 0.6208655368848458,
+      "model__min_child_weight": 6.232347238926064,
+      "model__gamma": 2.9113502554147517,
+      "model__reg_alpha": 0.00010622365894180684,
+      "model__reg_lambda": 0.07940205661174872,
+      "model__scale_pos_weight": 3.230598020152208,
+      "model__device": "cpu",
+      "model__tree_method": "hist"
+    },
+    "CatBoost": {
+      "iterations": 1100,
+      "depth": 4,
+      "learning_rate": 0.013610670317028875,
+      "l2_leaf_reg": 5.450031028311885,
+      "bagging_temperature": 3.6250649967024886,
+      "random_strength": 5.516170791728482
+    }
+  },
+  "optuna_best_objective_value": {
+    "LogReg": 0.8637638504184195,
+    "RandomForest": 0.857665498811067,
+    "XGBoost": 0.8688716797510365,
+    "CatBoost": 0.8731181118760362
+  },
+  "diagnostic_cutoffs_by_model": {
+    "LogReg": {
+      "source_dataset": "test_only_internal",
+      "target_sensitivity": 0.95,
+      "target_specificity": 0.9,
+      "rule_out_cutoff": 0.251253,
+      "rule_in_cutoff": 0.629938
+    },
+    "RandomForest": {
+      "source_dataset": "test_only_internal",
+      "target_sensitivity": 0.95,
+      "target_specificity": 0.9,
+      "rule_out_cutoff": 0.147617,
+      "rule_in_cutoff": 0.462606
+    },
+    "XGBoost": {
+      "source_dataset": "test_only_internal",
+      "target_sensitivity": 0.95,
+      "target_specificity": 0.9,
+      "rule_out_cutoff": 0.19529099762439728,
+      "rule_in_cutoff": 0.4995790123939514
+    },
+    "CatBoost": {
+      "source_dataset": "test_only_internal",
+      "target_sensitivity": 0.95,
+      "target_specificity": 0.9,
+      "rule_out_cutoff": 0.143479,
+      "rule_in_cutoff": 0.556205
+    }
+  },
+  "marker_diagnostic_internal": [
+    {
+      "marker": "FIB-4",
+      "dataset": "internal_test",
+      "rule_out_cutoff": 1.3,
+      "rule_in_cutoff": 2.67,
+      "source_note": "fixed cutoffs",
+      "AUROC": 0.9266826923076924,
+      "PR_AUC(AP)": 0.8946869847531271,
+      "gray_n": 88,
+      "gray_pct": 0.2972972972972973,
+      "plot_path": "/Users/jihoney/Documents/workdir/donga/01_Medical/Code_Medi/03_FIB/FIB-M3_v4_6var_jh_0506/Results_modular_internal/20260506_162835/marker_FIB-4_internal_test_Diagnostic_Zones.png"
+    },
+    {
+      "marker": "NFS",
+      "dataset": "internal_test",
+      "rule_out_cutoff": -1.455,
+      "rule_in_cutoff": 0.676,
+      "source_note": "fixed cutoffs",
+      "AUROC": 0.9263321314102564,
+      "PR_AUC(AP)": 0.8976762978369409,
+      "gray_n": 83,
+      "gray_pct": 0.28040540540540543,
+      "plot_path": "/Users/jihoney/Documents/workdir/donga/01_Medical/Code_Medi/03_FIB/FIB-M3_v4_6var_jh_0506/Results_modular_internal/20260506_162835/marker_NFS_internal_test_Diagnostic_Zones.png"
+    },
+    {
+      "marker": "M2BPGi",
+      "dataset": "internal_test",
+      "rule_out_cutoff": 0.53,
+      "rule_in_cutoff": 1.31,
+      "source_note": "internal sens95/spec90",
+      "AUROC": 0.8145032051282052,
+      "PR_AUC(AP)": 0.7220091240311843,
+      "gray_n": 156,
+      "gray_pct": 0.527027027027027,
+      "plot_path": "/Users/jihoney/Documents/workdir/donga/01_Medical/Code_Medi/03_FIB/FIB-M3_v4_6var_jh_0506/Results_modular_internal/20260506_162835/marker_M2BPGi_internal_test_Diagnostic_Zones.png"
+    }
+  ],
+  "marker_zone_summary_internal": [
+    {
+      "marker": "FIB-4",
+      "dataset": "internal_test",
+      "rule_out_cutoff": 1.3,
+      "rule_in_cutoff": 2.67,
+      "rule_out_sensitivity": 0.9711538461538461,
+      "rule_out_specificity": 0.6197916666666666,
+      "rule_out_npv": 0.9754098360655737,
+      "rule_out_fn": 3,
+      "rule_in_sensitivity": 0.7115384615384616,
+      "rule_in_specificity": 0.9375,
+      "rule_in_ppv": 0.8604651162790697,
+      "rule_in_fp": 12,
+      "gray_n": 88,
+      "gray_pct": 0.2972972972972973
+    },
+    {
+      "marker": "NFS",
+      "dataset": "internal_test",
+      "rule_out_cutoff": -1.455,
+      "rule_in_cutoff": 0.676,
+      "rule_out_sensitivity": 0.9230769230769231,
+      "rule_out_specificity": 0.7291666666666666,
+      "rule_out_npv": 0.9459459459459459,
+      "rule_out_fn": 8,
+      "rule_in_sensitivity": 0.5865384615384616,
+      "rule_in_specificity": 0.9791666666666666,
+      "rule_in_ppv": 0.9384615384615385,
+      "rule_in_fp": 4,
+      "gray_n": 83,
+      "gray_pct": 0.28040540540540543
+    },
+    {
+      "marker": "M2BPGi",
+      "dataset": "internal_test",
+      "rule_out_cutoff": 0.53,
+      "rule_in_cutoff": 1.31,
+      "rule_out_sensitivity": 0.9615384615384616,
+      "rule_out_specificity": 0.3333333333333333,
+      "rule_out_npv": 0.9411764705882353,
+      "rule_out_fn": 4,
+      "rule_in_sensitivity": 0.5192307692307693,
+      "rule_in_specificity": 0.9010416666666666,
+      "rule_in_ppv": 0.7397260273972602,
+      "rule_in_fp": 19,
+      "gray_n": 156,
+      "gray_pct": 0.527027027027027
+    }
+  ],
+  "bundle_paths": {
+    "LogReg": "Results_modular_internal/20260506_162835/logreg_bundle.joblib",
+    "RandomForest": "Results_modular_internal/20260506_162835/randomforest_bundle.joblib",
+    "XGBoost": "Results_modular_internal/20260506_162835/xgboost_bundle.joblib",
+    "CatBoost": "Results_modular_internal/20260506_162835/catboost_bundle.joblib"
+  }
+}
